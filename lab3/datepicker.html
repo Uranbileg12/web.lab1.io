@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="datepicker.css"/>
+    <style type="text/css">
+      img{
+    height: 100px;
+    width: 300px;
+}
+.myDiv {
+    width: 30%;
+    float: left;
+  }
+.mydiv {
+    width: 70%;
+    float: left;
+    color: darkblue;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .head{
+  border-style: solid;
+  border-width: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+   <ul class="list-group" id="result"></ul>
+  </div>
+    <div class="myDiv"><img src="hshuis.png"></div>
+    <div class="mydiv"><h1>2021-2022 School Calendar</h1></div>
+    <div id="datepicker1" class="Date-cont"></div>
+    <script type="text/javascript" src="DatePicker.js"></script>
+      <div class="ui-widget">
+</div>
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Тэмдэглэлт өдөр хайх" title="Type in a Тэмдэглэлт өдөр">
+  <table id="myTable">
+  <tr class="head">
+    <th style="width: 1%;">Сар</th>
+    <th style="width: 1%;">Өдөр</th>
+    <th style="width: 80%;">Тэмдэглэлт өдөр</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>Сайхан амарна</td> 
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>Сагсны тэмцээнтэй</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>3</td>
+    <td>Шагнал гардуулна даа</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>17</td>
+    <td>Жавхлан багшийн лаб 2-ыг хийнэ</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>Энэ лабынхаа хугацааг сунгах уу яах вэ гэдэгээ шийднэ</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>6</td>
+    <td>Энд юу бичье дээ байз</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>8</td>
+    <td>Эмэгтэйчүүддээ баяр хүргэнэ дээ</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>1</td>
+    <td>Бүгдээрээ худлаа ярьцаагаагаарай</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>10</td>
+    <td>Энэ сард ч ёстой юу ч болдоггүй сар даа</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>6</td>
+    <td>Жавхлан багшийн төрсөн өдөр</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>4</td>
+    <td>Хичээл амарсаан ураа</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>1</td>
+    <td>Хөдөө явдаг цаг даа</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>25</td>
+    <td>Хичээл сонголт эхэллээ</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>1</td>
+    <td>9-н сарын нэгэн боллоо ерөөсөө бидний баяр даа</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>13</td>
+    <td>Сур сур бас дахин сур</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>2</td>
+    <td>Сурсаар л бай</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>20</td>
+    <td>Өвлийн семистер хаагдах нь дээ</td>
+  </tr>
+    <tr>
+    <td>12</td>
+    <td>30</td>
+    <td>Дүн гаргаж дууслаа баярлалаа баяртай</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </script>
+    <script type="text/javascript">
+
+        //<![CDATA[
+        datePicker1 = new DatePicker("datepicker1", function (id, fixedDate) {
+          console.log("DatePicker with id", id,
+                  "selected date:", fixedDate.month + "/" + fixedDate.day + "/" + fixedDate.year);
+        });
+        datePicker1.render(new Date());
+        datePicker2 = new DatePicker("datepicker2", function (id, fixedDate) {
+          console.log("DatePicker with id", id,
+                  "selected date:", fixedDate.month + "/" + fixedDate.day + "/" + fixedDate.year);
+        });
+$(document).ready(function(){
+ $.ajaxSetup({ cache: false });
+ $('#search').keyup(function(){
+  $('#result').html('');
+  $('#state').val('');
+  var searchField = $('#search').val();
+  var expression = new RegExp(searchField, "i");
+  $.getJSON('data.json', function(data) {
+   $.each(data, function(value){
+     $('#result').append('<li class="list-group-item link-class"> '+value+' </li>');
+
+   });   
+  });
+ });
+ 
+ $('#result').on('click', 'li', function() {
+  var click_text = $(this).text().split('|');
+  $('#search').val($.trim(click_text[0]));
+  $("#result").html('');
+ });
+});
+    </script>
+  </body>
+</html>

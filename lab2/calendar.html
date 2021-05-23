@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" ></meta>
+    <title>
+    </title>
+    <style>
+        img{
+    height: 100px;
+    width: 300px;
+}
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+        	td.event1{
+            background-color: green;
+             }
+              td.event2{
+            background-color: red;
+             }
+             td.event3{
+            background-color: yellow;
+             }
+             td.event4{
+            background-color: green;
+             }
+              td.event5{
+            background-color: red;
+             }
+             td.event6{
+            background-color: yellow;
+             }td.event7{
+            background-color: green;
+             }
+              td.event8{
+            background-color: red;
+             }
+             td.event9{
+            background-color: yellow;
+             }td.event10{
+            background-color: green;
+             }
+              td.event11{
+            background-color: red;
+             }
+             td.event12{
+            background-color: yellow;
+             }
+        tr.header{
+            background-color: blue;
+        }
+    .months {
+  display: grid;
+  width:400px;
+  height: auto;
+  align-content: center;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.months {
+  width: 100;
+  float: left;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+.myDiv {
+    width: 30%;
+    float: left;
+    size: 30px;
+  }
+.mydiv {
+    width: 70%;
+    float: left;
+    color: darkblue;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+  background-color: rgb(75, 187, 150);
+}
+.head{
+	border-style: solid;
+  border-width: 5px;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+    </style>
+</head>
+<body>
+    <div class="myDiv"><img src="hshuis.png"></div>
+    <div class="mydiv"><h1>2021-2022 School Calendar</h1></div>
+        <div class="months">
+            <div class="col-s-12 col-4">
+            <table class="calendar test1">
+                <h1>January</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test2">
+                <h1>February</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test3">
+                <h1>March</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test4">
+                <h1>April</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test5">
+                <h1>May</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test6">
+                <h1>June</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test7">
+                <h1>Jule</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test8">
+                <h1>August</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test9">
+                <h1>September</h1>
+            </table></div>
+            <div class="col-s-12 col-4">
+            <table class="calendar test10">
+                <h1>October</h1>
+            </table></div>
+            <div class="col-3 col-s-12">
+            <table class="calendar test11">
+                <h1>November</h1>
+            </table></div>
+            <div class="col-3 col-s-12">
+            <table class="calendar test12">
+                <h1>December</h1>
+            </table></div>
+        <table id="myTable">
+  <tr class="head">
+    <th style="width: 1%;">Сар</th>
+    <th style="width: 1%;">Өдөр</th>
+    <th style="width: 2%;">Тэмдэглэлт өдөр</th>
+  </tr>
+  <tr>
+    <td class="event1">1</td>
+    <td class="event1">1</td>
+    <td>Сайхан амарна</td> 
+  </tr>
+  <tr>
+    <td class="event2">2</td>
+    <td class="event2">1</td>
+    <td>Сагсны тэмцээнтэй</td>
+  </tr>
+  <tr>
+    <td class="event2">2</td>
+    <td class="event2">3</td>
+    <td>Шагнал гардуулна даа</td>
+  </tr>
+  <tr>
+    <td class="event2">2</td>
+    <td class="event2">17</td>
+    <td>Жавхлан багшийн лаб 2-ыг хийнэ</td>
+  </tr>
+  <tr>
+    <td class="event3">3</td>
+    <td  class="event3">2</td>
+    <td>Энэ лабынхаа хугацааг сунгах уу яах вэ гэдэгээ шийднэ</td>
+  </tr>
+  <tr>
+    <td  class="event3">3</td>
+    <td  class="event3">6</td>
+    <td>Энд юу бичье дээ байз</td>
+  </tr>
+  <tr class="event3">
+    <td class="event3">3</td>
+    <td class="event3">8</td>
+    <td>Эмэгтэйчүүддээ баяр хүргэнэ дээ</td>
+  </tr>
+  <tr>
+    <td  class="event4">4</td>
+    <td  class="event4">1</td>
+    <td>Бүгдээрээ худлаа ярьцаагаагаарай</td>
+  </tr>
+  <tr>
+    <td  class="event5">5</td>
+    <td  class="event5">10</td>
+    <td>Энэ сард ч ёстой юу ч болдоггүй сар даа</td>
+  </tr>
+  <tr>
+    <td class="event6">6</td>
+    <td class="event6">6</td>
+    <td>Жавхлан багшийн төрсөн өдөр</td>
+  </tr>
+  <tr>
+    <td  class="event7">7</td>
+    <td  class="event7">4</td>
+    <td>Хичээл амарсаан ураа</td>
+  </tr>
+  <tr class="event8">
+    <td  class="event8">8</td>
+    <td  class="event8">1</td>
+    <td>Хөдөө явдаг цаг даа</td>
+  </tr>
+  <tr>
+    <td class="event8">8</td>
+    <td class="event8">25</td>
+    <td>Хичээл сонголт эхэллээ</td>
+  </tr>
+  <tr>
+    <td class="event9">9</td>
+    <td class="event9">1</td>
+    <td>9-н сарын нэгэн боллоо ерөөсөө бидний баяр даа</td>
+  </tr>
+  <tr>
+    <td  class="event10">10</td>
+    <td  class="event10">13</td>
+    <td>Сур сур бас дахин сур</td>
+  </tr>
+  <tr>
+    <td  class="event11">11</td>
+    <td  class="event11">2</td>
+    <td>Сурсаар л бай</td>
+  </tr>
+  <tr>
+    <td  class="event12">12</td>
+    <td  class="event12">20</td>
+    <td>Өвлийн семистер хаагдах нь дээ</td>
+  </tr>
+    <tr>
+    <td  class="event12">12</td>
+    <td  class="event12">30</td>
+    <td>Дүн гаргаж дууслаа баярлалаа баяртай</td>
+  </tr>
+</table></div>
+
+    <script>
+        var calendar2021 = {
+    1: {1: "Сайхан амарна"}, 
+    2: {1: "Сагсны тэмцээнтэй", 3: "Шагнал гардуулна даа", 17: "Жавхлан багшийн лаб 2-ыг хийнэ"}, 
+    3: {2: "Энэ лабынхаа хугацааг сунгах уу яах вэ гэдэгээ шийднэ", 6: "Энд юу бичье дээ байз", 8: "Эмэгтэйчүүддээ баяр хүргэнэ дээ"}, 
+    4: {1: "Бүгдээрээ худлаа ярьцаагаагаарай"}, 
+    5: {10: "Энэ сард ч ёстой юу ч болдоггүй сар даа"}, 
+    6: {6: "Жавхлан багшийн төрсөн өдөр"},  
+    7: {4: "Хичээл амарсаан ураа"}, 
+    8: {1: "Хөдөө явдаг цаг даа", 25: "Хичээл сонголт эхэллээ"}, 
+    9: {1: "9-н сарын нэгэн боллоо ерөөсөө бидний баяр даа"}, 
+    10: {13: "Сур сур бас дахин сур"}, 
+    11: {2: "Сурсаар л бай"}, 
+    12: {20: "Өвлийн семистер хаагдах нь дээ", 30: "Дүн гаргаж дууслаа баярлалаа баяртай"}}
+    var monthName=['January','February','March','April','May','June','Jule','August','September','November','December'];
+
+        function calendarPrint1(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if(i%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event1">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test1').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint1(1);
+        function calendarPrint2(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td><td></td><td></td><td></td><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if((i+4)%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event2">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test2').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint2(2);
+        function calendarPrint3(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){ 
+                  if((i+5)%7 == 0) {
+
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event3">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test3').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint3(3);
+    function calendarPrint4(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+
+                  if((i+1)%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event4">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test4').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint4(4);
+    function calendarPrint5(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td><td></td><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if((i+3)%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event5">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test5').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint5(5);
+    function calendarPrint6(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if((i-1)%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event6">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test6').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint6(6);
+    function calendarPrint7(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if((i+1)%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event7">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test7').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint7(7);
+    function calendarPrint8(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td><td></td><td></td><td></td><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if((i+4)%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event8">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test8').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint8(8);
+    function calendarPrint9(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if(i%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event9">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test9').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint9(9);
+    function calendarPrint10(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td><td></td><td></td>';
+               
+                
+                for(var i=1; i<=31; i++){
+                  if((i+2)%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event10">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test10').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint10(10);
+    function calendarPrint11(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if((i+5)%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event11">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test11').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint11(11);
+    function calendarPrint12(odor){
+               var odor;
+               var current = new Date(2021, odor, 0);
+               var htmlCreator = '';
+
+               htmlCreator += '<tr class="header"><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><td></td>';
+               
+                 
+                for(var i=1; i<=current.getDate(); i++){
+                  if(i%7 == 0) {
+                        console.log('huvaagdav');
+                        htmlCreator += '</tr><tr>';
+                } 
+                 if(calendar2021 [odor][i]){
+                    htmlCreator += '<td class="event12">'+i+'</td>';
+                }
+                   htmlCreator += '<td>'+i+'</td>';
+            }
+               htmlCreator += '</tr>';
+
+               document.querySelector('.test12').innerHTML = htmlCreator;
+               console.log(current);
+    }
+    calendarPrint12(12);
+    document.write(calendar2021[jan[1]]);
+    </script>
+    
+</body>
+</html>

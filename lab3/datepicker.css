@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0e0101;
+  }
+  .Date-cont {
+    
+    display: flex;
+    width: 490px;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .Date-cont > div:first-child {
+    display: flex;
+    text-align: center;
+    font-size: 1.1em;
+    justify-content: space-evenly;
+  }
+  .button {
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: inset 1px 1px 1px 0px;
+  }
+  .Date-cont > div {
+    display: grid;
+    grid-template-columns: repeat(7, 70px);
+    justify-items: center;
+  }
+  .Date-cont > div:nth-child(3) {
+    row-gap: 20px;
+  }
+  .Date-cont > div:nth-child(2) {
+    margin-bottom: 20px;
+    
+  }
+  .Date-cont > div > div {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: rgb(5, 0, 0);
+  }
+  #next{
+    text-align:right;
+      display: inline;
+    
+  }
+  #previous{
+   
+    text-align: start;
+  }
+  .Date-cont:nth-child(2){
+   
+   
+    text-align: center;
+  }
+  .Date-cont:nth-child(4){
+    
+    text-align: center;
+      
+    
+}
+
+
+
+
+  .Date-cont > div:nth-child(3) > div.d0 {
+    grid-column: 1;
+  }
+  .Date-cont > div:nth-child(3) > div.d1 {
+    grid-column: 2;
+  }
+  .Date-cont > div:nth-child(3) > div.d2 {
+    grid-column: 3;
+  }
+  .Date-cont > div:nth-child(3) > div.d3 {
+    grid-column: 4;
+  }
+  .Date-cont > div:nth-child(3) > div.d4 {
+    grid-column: 5;
+  }
+  .Date-cont > div:nth-child(3) > div.d5 {
+    grid-column: 6;
+  }
+  .Date-cont > div:nth-child(3) > div.d6 {
+    grid-column: 7;
+  }
+  body{
+    background-color: rgb(75, 187, 150);
+  }
